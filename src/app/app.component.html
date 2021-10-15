@@ -1,0 +1,50 @@
+
+
+
+<div class="container">
+
+
+
+    <div>
+        <h1>Scalable Service Assignment 1</h1>
+
+        <h2>Prepared by:</h2>
+        <ul>
+            <li>Ayushi Verma - 2020mt93157</li>
+            <li>Gaurav Sinha - 2020mt93014</li>
+            <li>Jabez - 2020mt93234</li>
+            <li>PBhuvana - 2020mt93047</li>
+        </ul>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark my-5">
+   
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active" (click)="selectedTab = 'users'">
+              <a class="nav-link" href="#">USERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" (click)="selectedTab = 'tasks'">TASKS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" (click)="selectedTab = 'assignments'">ASSIGNMENTS</a>
+            </li>
+          </ul>
+         
+        </div>
+      </nav>
+    
+      <div class="container">
+          <div *ngIf="selectedTab == 'users'">
+            <app-users></app-users>
+          </div>
+          <div *ngIf="selectedTab == 'tasks'">
+            <app-tasks></app-tasks>
+          </div>
+          <div *ngIf="selectedTab == 'assignments'">
+            <app-assignments></app-assignments>
+          </div>
+       
+      </div>
+</div>
